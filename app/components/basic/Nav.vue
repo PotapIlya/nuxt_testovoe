@@ -1,12 +1,14 @@
 <template>
     <div class="container">
-        <ul v-if="arrayNav.length" class="header__list col-8 ml-auto d-flex align-items-center justify-content-between">
+        <ul v-if="arrayNav.length"
+            class="header__list col-12 col-lg-8 ml-auto d-flex align-items-center justify-content-between">
 
             <li
                     v-for="(item, index) in arrayNav"
                     :key="index"
             >
                 <nuxt-link
+                        class="header__list-item"
                         :to="item.path">
                     {{ item.name }}
                 </nuxt-link>

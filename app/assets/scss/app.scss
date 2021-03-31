@@ -18,6 +18,14 @@ a{
         text-decoration: none;
     }
 }
+label{
+    margin: 0;
+    padding: 0;
+}
+input{
+    padding: 0 8px;
+}
+
 .aside{
     max-width: 200px;
     width: 100%;
@@ -25,9 +33,46 @@ a{
     padding-right: 40px;
 }
 
+.header{
+    margin: 20px 0;
+
+    &__list{
+        box-shadow: 5px 5px 15px #999;
+        border-radius: 20px;
+        padding: 30px;
+        a{
+            padding-bottom: 2px;
+        }
+
+        li:first-child a{
+            color: #6822ff;
+            border-bottom: 1px solid #6822ff;
+        }
+        li:nth-child(2) a{
+            color: green;
+            border-bottom: 1px solid green;
+        }
+        li:nth-child(3) a{
+            color: #293480;
+            border-bottom: 1px solid #293480;
+        }
+        li:nth-child(4) a{
+            color: #806204;
+            border-bottom: 1px solid #806204;
+        }
+        li:nth-child(5) a{
+            color: #650c80;
+            border-bottom: 1px solid #650c80;
+        }
+        li:last-child a{
+            color: #801816;
+            border-bottom: 1px solid #801816;
+        }
+    }
+}
 
 .indicator{
-
+    margin-bottom: 20px;
 
     &__title{
 
@@ -36,8 +81,15 @@ a{
 
     }
     &__item{
-      border: 1px solid #999;
-        border-radius: 6px;
+        border: 1px solid #999;
+        font-size: 12px;
+
+        &:first-child{
+            border-radius: 6px 0 0 6px;
+        }
+        &:last-child{
+            border-radius: 0 6px 6px 0;
+        }
 
         &.active{
             color: #fff;
@@ -59,6 +111,74 @@ a{
         }
     }
 }
+
+.form{
+
+    &__title{
+        margin-bottom: 20px;
+        position: relative;
+        color: #999;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 55%;
+            transform: translateY(-50%);
+            right: -20px;
+            width: 75%;
+            height: 1px;
+            background: #999;
+        }
+    }
+    &__greyText{
+        color: #999;
+        font-size: 14px;
+    }
+
+    &__wrapper{
+        label{
+            margin-bottom: 20px;
+            span{
+                font-weight: bold;
+                margin-bottom: 6px;
+            }
+
+
+        }
+        .changeName{
+            label{
+                margin-right: 10px;
+                padding: 3px 12px;
+
+                &.active{
+                    border-radius: 10px;
+                    background: green;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+}
+.buttonsPage{
+    background: #eee;
+    padding: 20px;
+    .btn{
+        font-size: 22px;
+        padding: 12px 26px;
+        border-radius: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
